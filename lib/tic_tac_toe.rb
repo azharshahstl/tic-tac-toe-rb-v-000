@@ -14,8 +14,13 @@ end
    index = input.to_i - 1 
  end
  
+<<<<<<< HEAD
  def move(board, index, current_player)
    board[index] = current_player
+=======
+ def move(board, index, position)
+   board[index] = position 
+>>>>>>> 525384292f622f14bf9d4169493a34fcc6d6d37e
  end
  
  def position_taken?(board, index)
@@ -45,7 +50,11 @@ end
    input=gets.strip
    index = input_to_index(input)
     if valid_move?(board, index)
+<<<<<<< HEAD
       move(board, index, current_player(board))
+=======
+      move(board, index, position = "X")
+>>>>>>> 525384292f622f14bf9d4169493a34fcc6d6d37e
     else
       turn(board)
     end
@@ -79,7 +88,11 @@ end
     
      def play(board)
       while over?(board) == false
+<<<<<<< HEAD
        turn(board)
+=======
+       turn
+>>>>>>> 525384292f622f14bf9d4169493a34fcc6d6d37e
       end
       if won?(board)
         puts"Congratulations #{winner(board)}!"
